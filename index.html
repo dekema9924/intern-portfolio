@@ -9,10 +9,10 @@
     <title>My Portfolio</title>
 </head>
 <body>
-    <div class="container">
-        <aside>
+        <div class="sidenav">
             <div class="about-me">
-                <div class="emoji"><img class="emoji" src="./images/gojo1.jpeg" width="100px" alt=""></div>
+                <div class="click-me">Click Me</div>
+                <div class="emoji"><img class="emoji" src="./images/profile-pic.png" width="100px" alt=""></div>
                 <h1>Daniel Ekema</h1>
                 <div class="developer">
                     <p class="resume"><a href="http://" target="_blank">Resume</a></p>
@@ -55,7 +55,6 @@
                         <dd>United States, Dallas GA</dd>
                     </div>
                     </div>
-
                 </dl>
     
             </div>
@@ -64,14 +63,15 @@
                 <a href="https://www.linkedin.com/in/daniel-ekema-44ba39225/"><i class="fa-brands fa-linkedin" style="color: #f0f5ff;"></i></a>
                 <a href="https://github.com/dekema9924"><i class="fa-brands fa-github" style="color: #eceff3;"></i></a>
             </div>
-        </aside>
+        </div>
 
-        <section>
+        <div class="main-content">
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="about-me">
@@ -87,7 +87,7 @@
                 </p>
                 My goal is to build applications
                 that are fully functional and user-friendly but at the same time attractive. 
-                Moreover, I add personal touch to my sites and make sure that is eye-catching and easy to use.
+                Moreover, I add personal touch to my sites and make sure that they are eye-catching and easy to use.
                  My aim is to bring across your message and identity in the most creative way.
                 </p>
             </div>
@@ -180,16 +180,41 @@
                     <div class="card-body">
                       <a href="https://github.com/dekema9924/quotesApi" class="card-link">link</a>
                     </div>
-                </div>
-                    
+                </div>  
             </div>
-        </section>
+            <h1 id="contact" class="contact-form">Contact Form</h1>
+            <div class="line"></div>
+            <form id="contact_form" name="contact_form" method="post" action="mailto:danekema9924@gmail.com">
+                <div class="mb-5 row">
+                    <div class="col">
+                        <label>First Name</label>
+                        <input type="text" required maxlength="50" class="form-control" id="first_name" name="first_name">
+                    </div>
+                    <div class="col">
+                        <label>Last Name</label>
+                        <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name">
+                    </div>
+                </div>
+                <div class="mb-5 row">
+                    <div class="col">
+                        <label for="email_addr">Email address</label>
+                        <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="col">
+                        <label for="phone_input">Phone</label>
+                        <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Phone"
+                            placeholder="Phone">
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary px-4 btn-lg">Post</button>
+                <a class="backtotop" href="#about">Back to Top</a>
 
-
-    </div>
-
-
-
-    
+            </form>
+ <script src="index.js"></script>      </div>  
 </body>
 </html>

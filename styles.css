@@ -6,45 +6,57 @@
     box-sizing: border-box;
 }
 
+
+
 a{
     color: inherit;
     text-decoration: none;
 }
 body{
     background-color: black;
-    margin-left: 200px;
-}
-.container{
     display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: 30px;
+    justify-content: center;
+    
 }
 
-aside{
+.click-me{
+    background-color: gray;
+    width: 70px;
+    height: 15px;
+    border-radius: 20px;
+    font-size: .5em;
+    position: absolute;
+    left: 290px;
+    top: 60px;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+}
+
+.sidenav{
     background-color: rgb(37, 36, 36);
     color: white;
     width:300px;
     border-radius: 10px;
-    position: fixed; 
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    top: 0;
     margin-top: 50px;
-}
+    text-align: center;
+    height: 690px;
+    position: sticky;
+    top: 0; 
+    transition: all.7s;
+} 
 
-.emoji{
+/* .emoji{
     background-color: rgb(63, 62, 62);
     width: 130px;
     height: 100px;
     border-radius: 10%;
     margin-bottom: 10px;
     margin-left: 90px;
-}
+} */
 .emoji img{
-    width: 100px;
+    width: 140px;
     text-align: center;
     margin-left: 10px;
     
@@ -70,7 +82,6 @@ aside{
 }
 
 
-
 dl{
     display: flex;
     flex-direction: column;
@@ -93,6 +104,7 @@ dl{
 }
 hr{
     width: 200px;
+    margin-left: 50px;
 
 }
 .flex i{
@@ -109,20 +121,21 @@ hr{
 nav{
     background-color: rgba(0, 0, 0, 0.298);
     height: 70px;
-    width: 390px;
-    border-top: none;
-    border-right: none;
-    border-top-left-radius: 20px;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin-left: 290px;
+
 }
 
 li{
     list-style: none;
+    font-weight: 900;
 }
+nav li:hover{
+    color:rgba(0, 170, 255, 0.811);
+    transition: all.5s;
+    text-decoration: underline;
+}
+
 ul{
     display: flex;
     gap: 20px;
@@ -143,16 +156,15 @@ ul{
     width: 45vw;
 }
 
-section{
+ .main-content{
     background-color: rgb(37, 36, 36);
     color: white;
-    padding-left: 40px;
-    margin: 50px 320px;
     width: 50vw;
-
-    
-
-}
+    margin-top: 50px;
+     padding-left: 40px;
+    /* margin: 50px 320px;
+    border: 2px solid white; */ 
+} 
 .cards{
     display: flex;
     flex-wrap: wrap;
@@ -182,5 +194,80 @@ border: 1px solid rgba(0, 0, 0, 1);
     flex-wrap: wrap;
     gap: 50px;
 }
+.projects .card:hover{
+    cursor: pointer;
+    transform: scale(.9);
+    transition: all .5s;
+}
+.contact-form{
+    margin-top: 30px;
+}
 
+
+/* mobile */
+
+@media (max-width:680px)  {
+     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+   
+     .sidenav{
+        position: static;
+        height: 190px;
+        overflow: hidden;
+        width: 390px;
+     }
+     .main-content{
+        width: 400px;
+        position: relative;
+        bottom: 70px;
+     }
+     .emoji img{
+        width: 110px;
+        text-align: center;
+        
+    }
+
+     .click-me{
+        display: block;
+     }
+     .developer p:nth-child(2){
+        display: none;
+     }
+     .resume{
+        width: 80px;
+        height: 20px;
+        font-size: .6em;
+        position: relative;
+        bottom: 30px;
+     }
+     .paragraph{
+        width: 300px;
+     }
+     
+     .clicked{
+        height: 600px;
+        padding-left: 30px;
+        transition: all .7s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px
+    }
+    .contact, .socials, hr{
+        position: relative;
+        bottom: 60px;
+        right: 20px;
+    }
+ 
+
+   body {
+        width: fit-content;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     };
+
+}
+    
 
